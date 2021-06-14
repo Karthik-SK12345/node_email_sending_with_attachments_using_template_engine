@@ -20,4 +20,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(emailRoutes.routes);
 
 
-app.listen(config.port, () => console.log(`app is listening on url: ${config.url}`));
+ const PORT = process.env.PORT || 4000
+  app.listen(PORT);
